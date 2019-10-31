@@ -1,0 +1,25 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "OverlayContainer",
+        "repositoryURL": "https://github.com/applidium/OverlayContainer.git",
+        "state": {
+          "branch": null,
+          "revision": "bb38a8516c2f051de5d5f4661d471d7b08d4f2ca",
+          "version": "3.2.0"
+        }
+      },
+      {
+        "package": "StiKit",
+        "repositoryURL": "https://github.com/sfla/StiKit.git",
+        "state": {
+          "branch": null,
+          "revision": "4ea2d4d59b90a45a345b40168445809f6b5f0c53",
+          "version": "0.0.8"
+        }
+      }
+    ]
+  },
+  "version": 1
+}

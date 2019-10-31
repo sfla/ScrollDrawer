@@ -1,0 +1,6 @@
+framework module Pods_ScrollDrawer {
+  umbrella header "Pods-ScrollDrawer-umbrella.h"
+
+  export *
+  module * { export * }
+}

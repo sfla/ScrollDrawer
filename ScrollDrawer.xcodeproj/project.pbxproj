@@ -3,27 +3,69 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1B7D1FBE2367547F008223D3 /* OverlayContainer in Frameworks */ = {isa = PBXBuildFile; productRef = 1B7D1FBD2367547F008223D3 /* OverlayContainer */; };
+		1B7D1FC023675BD2008223D3 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7D1FBF23675BD2008223D3 /* MainViewController.swift */; };
+		1B7D1FC523676668008223D3 /* ContainedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7D1FC423676668008223D3 /* ContainedViewController.swift */; };
+		1B7D1FC72367686A008223D3 /* DrawerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7D1FC62367686A008223D3 /* DrawerHelper.swift */; };
+		1B7D1FC92367690D008223D3 /* PassthroughViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7D1FC82367690D008223D3 /* PassthroughViewController.swift */; };
+		1B7D1FCC23677EE0008223D3 /* StiKitTableView in Frameworks */ = {isa = PBXBuildFile; productRef = 1B7D1FCB23677EE0008223D3 /* StiKitTableView */; };
+		1B7D1FCF2367888D008223D3 /* CorneredShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7D1FCE2367888D008223D3 /* CorneredShadowView.swift */; };
+		1B7D1FD223684DA4008223D3 /* WelcomeHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7D1FD123684DA4008223D3 /* WelcomeHeader.swift */; };
+		1B7D1FD523684EEF008223D3 /* WelcomeHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B7D1FD423684EEF008223D3 /* WelcomeHeader.xib */; };
+		1BB095102368B8BF00E7788D /* UnderlinedHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB0950F2368B8BF00E7788D /* UnderlinedHeader.swift */; };
+		1BB095122368B8CC00E7788D /* UnderlinedHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1BB095112368B8CC00E7788D /* UnderlinedHeader.xib */; };
+		1BB095142369CE7A00E7788D /* ContainedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB095132369CE7A00E7788D /* ContainedTableViewController.swift */; };
+		1BB095162369CFDC00E7788D /* StopPlaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB095152369CFDC00E7788D /* StopPlaceViewController.swift */; };
+		1BB09518236ACFA100E7788D /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB09517236ACFA100E7788D /* SearchViewController.swift */; };
+		1BB0951C236B086700E7788D /* EnturAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB0951B236B086700E7788D /* EnturAPI.swift */; };
+		1BB0951E236B091400E7788D /* EnturDTOs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB0951D236B091400E7788D /* EnturDTOs.swift */; };
+		1BB09522236B116600E7788D /* PlaceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB09520236B116600E7788D /* PlaceCell.swift */; };
+		1BB09523236B116600E7788D /* PlaceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1BB09521236B116600E7788D /* PlaceCell.xib */; };
+		1BB09527236B1F9E00E7788D /* ContainedNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB09526236B1F9E00E7788D /* ContainedNavigationController.swift */; };
+		1BB09529236B392F00E7788D /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB09528236B392F00E7788D /* TableViewController.swift */; };
 		1BE2E2BC2362EDD10014EF60 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE2E2BB2362EDD10014EF60 /* AppDelegate.swift */; };
-		1BE2E2BE2362EDD10014EF60 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE2E2BD2362EDD10014EF60 /* SceneDelegate.swift */; };
-		1BE2E2C02362EDD10014EF60 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE2E2BF2362EDD10014EF60 /* ViewController.swift */; };
-		1BE2E2C32362EDD10014EF60 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1BE2E2C12362EDD10014EF60 /* Main.storyboard */; };
 		1BE2E2C52362EDD30014EF60 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1BE2E2C42362EDD30014EF60 /* Assets.xcassets */; };
 		1BE2E2C82362EDD30014EF60 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1BE2E2C62362EDD30014EF60 /* LaunchScreen.storyboard */; };
+		1BE2E2D12362F6940014EF60 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE2E2D02362F6940014EF60 /* BaseViewController.swift */; };
+		1BE2E2D32362F6F60014EF60 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE2E2D22362F6F60014EF60 /* MapViewController.swift */; };
+		1BE2E2D72362F9030014EF60 /* MainContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE2E2D62362F9030014EF60 /* MainContentViewController.swift */; };
+		269517BEBC621B16BB6F8F75 /* Pods_ScrollDrawer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B16D4363FF796924E21C285 /* Pods_ScrollDrawer.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1B7D1FBF23675BD2008223D3 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		1B7D1FC423676668008223D3 /* ContainedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainedViewController.swift; sourceTree = "<group>"; };
+		1B7D1FC62367686A008223D3 /* DrawerHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawerHelper.swift; sourceTree = "<group>"; };
+		1B7D1FC82367690D008223D3 /* PassthroughViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassthroughViewController.swift; sourceTree = "<group>"; };
+		1B7D1FCE2367888D008223D3 /* CorneredShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CorneredShadowView.swift; sourceTree = "<group>"; };
+		1B7D1FD123684DA4008223D3 /* WelcomeHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeHeader.swift; sourceTree = "<group>"; };
+		1B7D1FD423684EEF008223D3 /* WelcomeHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WelcomeHeader.xib; sourceTree = "<group>"; };
+		1BB0950F2368B8BF00E7788D /* UnderlinedHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderlinedHeader.swift; sourceTree = "<group>"; };
+		1BB095112368B8CC00E7788D /* UnderlinedHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UnderlinedHeader.xib; sourceTree = "<group>"; };
+		1BB095132369CE7A00E7788D /* ContainedTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainedTableViewController.swift; sourceTree = "<group>"; };
+		1BB095152369CFDC00E7788D /* StopPlaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopPlaceViewController.swift; sourceTree = "<group>"; };
+		1BB09517236ACFA100E7788D /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		1BB0951B236B086700E7788D /* EnturAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnturAPI.swift; sourceTree = "<group>"; };
+		1BB0951D236B091400E7788D /* EnturDTOs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnturDTOs.swift; sourceTree = "<group>"; };
+		1BB09520236B116600E7788D /* PlaceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceCell.swift; sourceTree = "<group>"; };
+		1BB09521236B116600E7788D /* PlaceCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlaceCell.xib; sourceTree = "<group>"; };
+		1BB09526236B1F9E00E7788D /* ContainedNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ContainedNavigationController.swift; path = "/Users/stianflatby/Documents/iOS Projects/ScrollDrawer/ScrollDrawer/Drawer/ContainedNavigationController.swift"; sourceTree = "<absolute>"; };
+		1BB09528236B392F00E7788D /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		1BE2E2B82362EDD10014EF60 /* ScrollDrawer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScrollDrawer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BE2E2BB2362EDD10014EF60 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1BE2E2BD2362EDD10014EF60 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		1BE2E2BF2362EDD10014EF60 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		1BE2E2C22362EDD10014EF60 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1BE2E2C42362EDD30014EF60 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1BE2E2C72362EDD30014EF60 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1BE2E2C92362EDD30014EF60 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1BE2E2D02362F6940014EF60 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		1BE2E2D22362F6F60014EF60 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		1BE2E2D62362F9030014EF60 /* MainContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainContentViewController.swift; sourceTree = "<group>"; };
+		3B16D4363FF796924E21C285 /* Pods_ScrollDrawer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ScrollDrawer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		455C8C2F486CEA267EAC60BC /* Pods-ScrollDrawer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScrollDrawer.debug.xcconfig"; path = "Target Support Files/Pods-ScrollDrawer/Pods-ScrollDrawer.debug.xcconfig"; sourceTree = "<group>"; };
+		885F5769EE7DCDDD56362EEE /* Pods-ScrollDrawer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScrollDrawer.release.xcconfig"; path = "Target Support Files/Pods-ScrollDrawer/Pods-ScrollDrawer.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +73,80 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				269517BEBC621B16BB6F8F75 /* Pods_ScrollDrawer.framework in Frameworks */,
+				1B7D1FCC23677EE0008223D3 /* StiKitTableView in Frameworks */,
+				1B7D1FBE2367547F008223D3 /* OverlayContainer in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1B7D1FC12367657A008223D3 /* Drawer */ = {
+			isa = PBXGroup;
+			children = (
+				1B7D1FC423676668008223D3 /* ContainedViewController.swift */,
+				1BB095132369CE7A00E7788D /* ContainedTableViewController.swift */,
+				1B7D1FC82367690D008223D3 /* PassthroughViewController.swift */,
+				1B7D1FC62367686A008223D3 /* DrawerHelper.swift */,
+				1B7D1FCE2367888D008223D3 /* CorneredShadowView.swift */,
+				1BB09526236B1F9E00E7788D /* ContainedNavigationController.swift */,
+			);
+			path = Drawer;
+			sourceTree = "<group>";
+		};
+		1B7D1FCD23677F42008223D3 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				1BB09520236B116600E7788D /* PlaceCell.swift */,
+				1BB09521236B116600E7788D /* PlaceCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		1B7D1FD023684D6F008223D3 /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				1B7D1FD323684EC8008223D3 /* WelcomeHeader */,
+				1BB0950E2368B89A00E7788D /* UnderlinedHeader */,
+			);
+			path = Headers;
+			sourceTree = "<group>";
+		};
+		1B7D1FD323684EC8008223D3 /* WelcomeHeader */ = {
+			isa = PBXGroup;
+			children = (
+				1B7D1FD123684DA4008223D3 /* WelcomeHeader.swift */,
+				1B7D1FD423684EEF008223D3 /* WelcomeHeader.xib */,
+			);
+			path = WelcomeHeader;
+			sourceTree = "<group>";
+		};
+		1BB0950E2368B89A00E7788D /* UnderlinedHeader */ = {
+			isa = PBXGroup;
+			children = (
+				1BB0950F2368B8BF00E7788D /* UnderlinedHeader.swift */,
+				1BB095112368B8CC00E7788D /* UnderlinedHeader.xib */,
+			);
+			path = UnderlinedHeader;
+			sourceTree = "<group>";
+		};
+		1BB0951F236B098B00E7788D /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				1BB0951B236B086700E7788D /* EnturAPI.swift */,
+				1BB0951D236B091400E7788D /* EnturDTOs.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
 		1BE2E2AF2362EDD10014EF60 = {
 			isa = PBXGroup;
 			children = (
 				1BE2E2BA2362EDD10014EF60 /* ScrollDrawer */,
 				1BE2E2B92362EDD10014EF60 /* Products */,
+				54D309E478031BAACDB5C64A /* Pods */,
+				7CD2B5929682F20830B694BB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +161,48 @@
 		1BE2E2BA2362EDD10014EF60 /* ScrollDrawer */ = {
 			isa = PBXGroup;
 			children = (
+				1BE2E2CF2362F64E0014EF60 /* SupportingFiles */,
 				1BE2E2BB2362EDD10014EF60 /* AppDelegate.swift */,
-				1BE2E2BD2362EDD10014EF60 /* SceneDelegate.swift */,
-				1BE2E2BF2362EDD10014EF60 /* ViewController.swift */,
-				1BE2E2C12362EDD10014EF60 /* Main.storyboard */,
-				1BE2E2C42362EDD30014EF60 /* Assets.xcassets */,
-				1BE2E2C62362EDD30014EF60 /* LaunchScreen.storyboard */,
-				1BE2E2C92362EDD30014EF60 /* Info.plist */,
+				1B7D1FC12367657A008223D3 /* Drawer */,
+				1BE2E2D02362F6940014EF60 /* BaseViewController.swift */,
+				1BB09528236B392F00E7788D /* TableViewController.swift */,
+				1BE2E2D22362F6F60014EF60 /* MapViewController.swift */,
+				1B7D1FBF23675BD2008223D3 /* MainViewController.swift */,
+				1BB09517236ACFA100E7788D /* SearchViewController.swift */,
+				1BE2E2D62362F9030014EF60 /* MainContentViewController.swift */,
+				1BB095152369CFDC00E7788D /* StopPlaceViewController.swift */,
+				1BB0951F236B098B00E7788D /* Search */,
+				1B7D1FCD23677F42008223D3 /* Cells */,
+				1B7D1FD023684D6F008223D3 /* Headers */,
 			);
 			path = ScrollDrawer;
+			sourceTree = "<group>";
+		};
+		1BE2E2CF2362F64E0014EF60 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				1BE2E2C92362EDD30014EF60 /* Info.plist */,
+				1BE2E2C62362EDD30014EF60 /* LaunchScreen.storyboard */,
+				1BE2E2C42362EDD30014EF60 /* Assets.xcassets */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		54D309E478031BAACDB5C64A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				455C8C2F486CEA267EAC60BC /* Pods-ScrollDrawer.debug.xcconfig */,
+				885F5769EE7DCDDD56362EEE /* Pods-ScrollDrawer.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		7CD2B5929682F20830B694BB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3B16D4363FF796924E21C285 /* Pods_ScrollDrawer.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,6 +212,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1BE2E2CC2362EDD30014EF60 /* Build configuration list for PBXNativeTarget "ScrollDrawer" */;
 			buildPhases = (
+				ACB099FB3A0E99F7C33B1B03 /* [CP] Check Pods Manifest.lock */,
 				1BE2E2B42362EDD10014EF60 /* Sources */,
 				1BE2E2B52362EDD10014EF60 /* Frameworks */,
 				1BE2E2B62362EDD10014EF60 /* Resources */,
@@ -83,6 +222,10 @@
 			dependencies = (
 			);
 			name = ScrollDrawer;
+			packageProductDependencies = (
+				1B7D1FBD2367547F008223D3 /* OverlayContainer */,
+				1B7D1FCB23677EE0008223D3 /* StiKitTableView */,
+			);
 			productName = ScrollDrawer;
 			productReference = 1BE2E2B82362EDD10014EF60 /* ScrollDrawer.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +254,10 @@
 				Base,
 			);
 			mainGroup = 1BE2E2AF2362EDD10014EF60;
+			packageReferences = (
+				1B7D1FBC2367547F008223D3 /* XCRemoteSwiftPackageReference "OverlayContainer" */,
+				1B7D1FCA23677EE0008223D3 /* XCRemoteSwiftPackageReference "StiKit" */,
+			);
 			productRefGroup = 1BE2E2B92362EDD10014EF60 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -125,36 +272,71 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1BB095122368B8CC00E7788D /* UnderlinedHeader.xib in Resources */,
 				1BE2E2C82362EDD30014EF60 /* LaunchScreen.storyboard in Resources */,
 				1BE2E2C52362EDD30014EF60 /* Assets.xcassets in Resources */,
-				1BE2E2C32362EDD10014EF60 /* Main.storyboard in Resources */,
+				1BB09523236B116600E7788D /* PlaceCell.xib in Resources */,
+				1B7D1FD523684EEF008223D3 /* WelcomeHeader.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		ACB099FB3A0E99F7C33B1B03 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ScrollDrawer-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1BE2E2B42362EDD10014EF60 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1BE2E2C02362EDD10014EF60 /* ViewController.swift in Sources */,
+				1B7D1FCF2367888D008223D3 /* CorneredShadowView.swift in Sources */,
+				1BB095142369CE7A00E7788D /* ContainedTableViewController.swift in Sources */,
+				1BB09522236B116600E7788D /* PlaceCell.swift in Sources */,
+				1BB0951E236B091400E7788D /* EnturDTOs.swift in Sources */,
 				1BE2E2BC2362EDD10014EF60 /* AppDelegate.swift in Sources */,
-				1BE2E2BE2362EDD10014EF60 /* SceneDelegate.swift in Sources */,
+				1BB09527236B1F9E00E7788D /* ContainedNavigationController.swift in Sources */,
+				1B7D1FC72367686A008223D3 /* DrawerHelper.swift in Sources */,
+				1BE2E2D32362F6F60014EF60 /* MapViewController.swift in Sources */,
+				1B7D1FC92367690D008223D3 /* PassthroughViewController.swift in Sources */,
+				1B7D1FC523676668008223D3 /* ContainedViewController.swift in Sources */,
+				1BB095102368B8BF00E7788D /* UnderlinedHeader.swift in Sources */,
+				1BB0951C236B086700E7788D /* EnturAPI.swift in Sources */,
+				1BB09518236ACFA100E7788D /* SearchViewController.swift in Sources */,
+				1BB09529236B392F00E7788D /* TableViewController.swift in Sources */,
+				1B7D1FC023675BD2008223D3 /* MainViewController.swift in Sources */,
+				1BB095162369CFDC00E7788D /* StopPlaceViewController.swift in Sources */,
+				1B7D1FD223684DA4008223D3 /* WelcomeHeader.swift in Sources */,
+				1BE2E2D12362F6940014EF60 /* BaseViewController.swift in Sources */,
+				1BE2E2D72362F9030014EF60 /* MainContentViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		1BE2E2C12362EDD10014EF60 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				1BE2E2C22362EDD10014EF60 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		1BE2E2C62362EDD30014EF60 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -216,7 +398,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -270,7 +452,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -282,11 +464,13 @@
 		};
 		1BE2E2CD2362EDD30014EF60 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 455C8C2F486CEA267EAC60BC /* Pods-ScrollDrawer.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LT4LCKZ4G7;
-				INFOPLIST_FILE = ScrollDrawer/Info.plist;
+				INFOPLIST_FILE = ScrollDrawer/SupportingFiles/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -300,11 +484,13 @@
 		};
 		1BE2E2CE2362EDD30014EF60 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 885F5769EE7DCDDD56362EEE /* Pods-ScrollDrawer.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LT4LCKZ4G7;
-				INFOPLIST_FILE = ScrollDrawer/Info.plist;
+				INFOPLIST_FILE = ScrollDrawer/SupportingFiles/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -338,6 +524,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1B7D1FBC2367547F008223D3 /* XCRemoteSwiftPackageReference "OverlayContainer" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/applidium/OverlayContainer.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.2.0;
+			};
+		};
+		1B7D1FCA23677EE0008223D3 /* XCRemoteSwiftPackageReference "StiKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/sfla/StiKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.0.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1B7D1FBD2367547F008223D3 /* OverlayContainer */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1B7D1FBC2367547F008223D3 /* XCRemoteSwiftPackageReference "OverlayContainer" */;
+			productName = OverlayContainer;
+		};
+		1B7D1FCB23677EE0008223D3 /* StiKitTableView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1B7D1FCA23677EE0008223D3 /* XCRemoteSwiftPackageReference "StiKit" */;
+			productName = StiKitTableView;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 1BE2E2B02362EDD10014EF60 /* Project object */;
 }

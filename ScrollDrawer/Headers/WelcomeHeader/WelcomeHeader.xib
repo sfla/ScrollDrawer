@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="fop-V6-5lZ" customClass="WelcomeHeader" customModule="ScrollDrawer" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="143"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome, name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XYI-Lu-dgo">
+                    <rect key="frame" x="16" y="10" width="382" height="29"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xLM-VV-OS5">
+                    <rect key="frame" x="161.5" y="47" width="91" height="30"/>
+                    <state key="normal" title="Your account">
+                        <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="tapButton:" destination="-1" eventType="touchUpInside" id="JWy-lV-yTr"/>
+                    </connections>
+                </button>
+            </subviews>
+            <constraints>
+                <constraint firstItem="xLM-VV-OS5" firstAttribute="top" secondItem="XYI-Lu-dgo" secondAttribute="bottom" constant="8" id="3j7-qK-0hx"/>
+                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="xLM-VV-OS5" secondAttribute="bottom" priority="999" constant="16" id="7Pb-Ce-jzy"/>
+                <constraint firstItem="XYI-Lu-dgo" firstAttribute="leading" secondItem="k1L-mF-bj6" secondAttribute="leading" constant="16" id="BB3-iL-5Ai"/>
+                <constraint firstItem="k1L-mF-bj6" firstAttribute="trailing" secondItem="XYI-Lu-dgo" secondAttribute="trailing" priority="999" constant="16" id="Ntr-5G-Rt4"/>
+                <constraint firstItem="xLM-VV-OS5" firstAttribute="centerX" secondItem="XYI-Lu-dgo" secondAttribute="centerX" id="h8H-O7-ijX"/>
+                <constraint firstItem="XYI-Lu-dgo" firstAttribute="top" secondItem="fop-V6-5lZ" secondAttribute="top" constant="10" id="m6e-1V-h9f"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="k1L-mF-bj6"/>
+            <connections>
+                <outlet property="btnAccount" destination="xLM-VV-OS5" id="kIO-dZ-KeU"/>
+                <outlet property="labWelcome" destination="XYI-Lu-dgo" id="hDP-H1-W7q"/>
+            </connections>
+            <point key="canvasLocation" x="92.753623188405811" y="143.63839285714286"/>
+        </view>
+    </objects>
+</document>
