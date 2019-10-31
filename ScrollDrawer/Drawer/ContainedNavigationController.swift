@@ -28,6 +28,6 @@ class ContainedNavigationController: ContainedViewController {
 
 extension ContainedNavigationController:UINavigationControllerDelegate{
     func navigationController(_ navigationController: UINavigationController, didShow viewController: UIViewController, animated: Bool) {
-        overlayContainer?.drivingScrollView = (viewController as? TableViewController)?.tableView ?? (viewController as? Contained)?.drivingScrollView
+        overlayContainer?.drivingScrollView = (viewController as? TableViewController)?.tableView ?? (viewController as? ContainedViewController)?.drivingScrollView
     }
 }

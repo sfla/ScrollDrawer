@@ -10,7 +10,7 @@ class MainViewController: MapViewController {
     
     private lazy var searchViewController = SearchViewController()
     
-    private var containedViewControllers:[Contained] = []
+    private var containedViewControllers:[ContainedViewController] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,8 +22,7 @@ class MainViewController: MapViewController {
         updateMapWithContainedDrawerHeight(contained: mainContent)
     }
     
-    private func updateMapWithContainedDrawerHeight(contained:Contained){
-        var contained = contained
+    private func updateMapWithContainedDrawerHeight(contained:ContainedViewController){
         contained.currentDrawerHeight.observe { [weak self] (height) in
             if (self?.containedViewControllers.last ?? self?.mainContent) == contained{
                 self?.updateMapPadding(edgeInsets: self?.mapPadding(for: height) ?? .zero)
@@ -52,7 +51,7 @@ class MainViewController: MapViewController {
         searchViewController.didMove(toParent: self)
     }
     
-    private func show(contained:Contained){
+    private func show(contained:ContainedViewController){
         let drawerToHide = containedViewControllers.last ?? mainContent
         drawerToHide.hideDrawer(animated: true)
         containedViewControllers.append(contained)
@@ -61,7 +60,7 @@ class MainViewController: MapViewController {
         }
         contained.showDrawer(animated: true)
     }
-    private func close(containedViewController:Contained){
+    private func close(containedViewController:ContainedViewController){
         if containedViewControllers.last == containedViewController{
             containedViewControllers.removeLast()
             containedViewController.closeDrawer(animated: true)
@@ -137,7 +136,7 @@ extension MainViewController:SearchViewDelegate{
 }
 
 extension MainViewController:ContainedDelegate{
-    func containedViewControllerClose(containedViewController: Contained) {
+    func containedViewControllerClose(containedViewController: ContainedViewController) {
         close(containedViewController: containedViewController)
     }
 }

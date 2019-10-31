@@ -2,61 +2,11 @@ import UIKit
 import OverlayContainer
 import StiKitUtilities
 
-protocol Contained{
-    var preferredContainerNotch:Int {get set}
-    var lastContainerNotch:Int {get set}
-    var currentDrawerHeight:Observable<CGFloat> {get}
-    var animateAlongsideDrawer:((OverlayContainerTransitionCoordinatorContext)->())? {get set}
-    var containedDelegate:ContainedDelegate? {get set}
-    var drivingScrollView:UIScrollView? {get set}
-
-    //Has defaults
-    var overlayContainer:OverlayContainerViewController? { get }
-    func showDrawer(animated:Bool)
-    func hideDrawer(animated:Bool)
-    func closeDrawer(animated:Bool)
-    func removeDrawer()
-}
-func == (lhs: Contained?, rhs: Contained?)->Bool{
-    return lhs?.overlayContainer == rhs?.overlayContainer && rhs?.overlayContainer != nil
-}
-extension Contained{
-    var overlayContainer:OverlayContainerViewController? { get {
-    return (self as? UIViewController)?.parent as? OverlayContainerViewController
-    }}
-    
-    func showDrawer(animated:Bool){
-        let containerNotch = lastContainerNotch >= 0 ? lastContainerNotch : preferredContainerNotch
-        overlayContainer?.moveOverlay(toNotchAt: containerNotch, animated: animated)
-    }
-    func hideDrawer(animated:Bool){
-        overlayContainer?.moveOverlay(toNotchAt: -1, animated: animated)
-    }
-    func closeDrawer(animated:Bool){
-        overlayContainer?.moveOverlay(toNotchAt: -1, animated: animated, completion: {
-            self.removeDrawer()
-        })
-    }
-    func removeDrawer(){
-        let overlay = self.overlayContainer
-        overlay?.removeFromParent()
-        if let vcs = overlay?.viewControllers{
-            vcs.forEach({$0.removeFromParent()})
-        }
-        overlay?.drivingScrollView = nil
-        overlay?.view.removeFromSuperview()
-        (self as? UIViewController)?.view.removeFromSuperview()
-        overlay?.viewControllers.removeAll()
-        overlay?.delegate = nil
-        (self as? UIViewController)?.removeFromParent()
-    }
-}
-
 protocol ContainedDelegate{
-    func containedViewControllerClose(containedViewController:Contained)
+    func containedViewControllerClose(containedViewController:ContainedViewController)
 }
 
-class ContainedViewController:BaseViewController, Contained{
+class ContainedViewController:BaseViewController{
     
     var drivingScrollView: UIScrollView? = nil
     var preferredContainerNotch:Int = 0
@@ -103,6 +53,32 @@ class ContainedViewController:BaseViewController, Contained{
     }
     @objc func close(){
         containedDelegate?.containedViewControllerClose(containedViewController: self)
+    }
+    
+    func showDrawer(animated:Bool){
+        let containerNotch = lastContainerNotch >= 0 ? lastContainerNotch : preferredContainerNotch
+        overlayContainer?.moveOverlay(toNotchAt: containerNotch, animated: animated)
+    }
+    func hideDrawer(animated:Bool){
+        overlayContainer?.moveOverlay(toNotchAt: -1, animated: animated)
+    }
+    func closeDrawer(animated:Bool){
+        overlayContainer?.moveOverlay(toNotchAt: -1, animated: animated, completion: {
+            self.removeDrawer()
+        })
+    }
+    func removeDrawer(){
+        let overlay = self.overlayContainer
+        overlay?.removeFromParent()
+        if let vcs = overlay?.viewControllers{
+            vcs.forEach({$0.removeFromParent()})
+        }
+        overlay?.drivingScrollView = nil
+        overlay?.view.removeFromSuperview()
+        self.view.removeFromSuperview()
+        overlay?.viewControllers.removeAll()
+        overlay?.delegate = nil
+        self.removeFromParent()
     }
     
     deinit {

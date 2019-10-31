@@ -3,12 +3,10 @@ import OverlayContainer
 
 struct DrawerHelper{
     private init(){}
-    static func add(contained:Contained, asDrawerIn hostingViewController:UIViewController){
+    static func add(contained:ContainedViewController, asDrawerIn hostingViewController:UIViewController){
         let container = OverlayContainerViewController()
-        container.delegate = (contained as? OverlayContainerViewControllerDelegate)
-        if let vc = contained as? UIViewController{
-            container.viewControllers = [PassthroughViewController(), vc]
-        }
+        container.delegate = contained
+        container.viewControllers = [PassthroughViewController(), contained]
         
         hostingViewController.addChild(container)
         hostingViewController.view.addSubview(container.view)
