@@ -14,7 +14,7 @@ class ContainedViewController:BaseViewController{
     var currentDrawerHeight = Observable(CGFloat(0))
     var animateAlongsideDrawer:((OverlayContainerTransitionCoordinatorContext)->())?
     let closeable:Bool
-    var closeButton:UIButton?
+    weak var closeButton:UIButton?
     
     var containedDelegate:ContainedDelegate?
     
@@ -41,7 +41,8 @@ class ContainedViewController:BaseViewController{
     }
     
     func addCloseableButton(){
-        closeButton = UIButton(frame: .zero)
+        let button = UIButton(frame: .zero)
+        closeButton = button
         closeButton!.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(closeButton!)
         closeButton!.setImage(UIImage(named: "close"), for: .normal)
@@ -63,13 +64,12 @@ class ContainedViewController:BaseViewController{
         overlayContainer?.moveOverlay(toNotchAt: -1, animated: animated)
     }
     func closeDrawer(animated:Bool){
-        overlayContainer?.moveOverlay(toNotchAt: -1, animated: animated, completion: {
-            self.removeDrawer()
+        overlayContainer?.moveOverlay(toNotchAt: -1, animated: animated, completion: { [weak self] in
+            self?.removeDrawer()
         })
     }
     func removeDrawer(){
         let overlay = self.overlayContainer
-        overlay?.removeFromParent()
         if let vcs = overlay?.viewControllers{
             vcs.forEach({$0.removeFromParent()})
         }
@@ -78,7 +78,12 @@ class ContainedViewController:BaseViewController{
         self.view.removeFromSuperview()
         overlay?.viewControllers.removeAll()
         overlay?.delegate = nil
+        overlay?.removeFromParent()
+        self.animateAlongsideDrawer = nil
+        self.containedDelegate = nil
+        self.lifetimeDisposeBag = DisposeBag()
         self.removeFromParent()
+        
     }
     
     deinit {
@@ -114,8 +119,8 @@ extension ContainedViewController:OverlayContainerViewControllerDelegate{
     
     func overlayContainerViewController(_ containerViewController: OverlayContainerViewController, willTranslateOverlay overlayViewController: UIViewController, transitionCoordinator: OverlayContainerTransitionCoordinator) {
         if transitionCoordinator.isAnimated{
-            transitionCoordinator.animate(alongsideTransition: { (context) in
-                self.animateAlongsideDrawer?(context)
+            transitionCoordinator.animate(alongsideTransition: { [weak self] (context) in
+                self?.animateAlongsideDrawer?(context)
             }) { (context) in
                 
             }

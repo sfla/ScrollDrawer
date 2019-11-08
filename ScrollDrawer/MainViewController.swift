@@ -23,11 +23,12 @@ class MainViewController: MapViewController {
     }
     
     private func updateMapWithContainedDrawerHeight(contained:ContainedViewController){
+        
         contained.currentDrawerHeight.observe { [weak self] (height) in
             if (self?.containedViewControllers.last ?? self?.mainContent) == contained{
                 self?.updateMapPadding(edgeInsets: self?.mapPadding(for: height) ?? .zero)
             }
-        }.disposed(by: lifetimeDisposeBag)
+        }.disposed(by: contained.lifetimeDisposeBag)
         
         contained.animateAlongsideDrawer = { [weak self] (context) in
             if (self?.containedViewControllers.last ?? self?.mainContent) == contained{
@@ -63,6 +64,11 @@ class MainViewController: MapViewController {
     private func close(containedViewController:ContainedViewController){
         if containedViewControllers.last == containedViewController{
             containedViewControllers.removeLast()
+            if let nav = containedViewController as? ContainedNavigationController, let placeVC = nav.underlyingNavigationController.topViewController as? StopPlaceViewController{
+                if let anno = mapView.annotations.first(where: {($0 as? PlaceAnnotation)?.place.properties?.id == placeVC.place.properties?.id && placeVC.place.properties?.id != nil}){
+                    mapView.deselectAnnotation(anno, animated: true)
+                }
+            }
             containedViewController.closeDrawer(animated: true)
             let drawerToShow = containedViewControllers.last ?? mainContent
             drawerToShow.showDrawer(animated: true)
@@ -77,12 +83,15 @@ class MainViewController: MapViewController {
         show(contained: nav)
         updateMapWithContainedDrawerHeight(contained: nav)
         
-        if let c = place.coordinates(){
+        if let existing = mapView.annotations.first(where: {($0 as? PlaceAnnotation)?.place.properties?.id == place.properties?.id && place.properties?.id != nil}){
+            mapView.selectAnnotation(existing, animated: true)
+        }else if let c = place.coordinates(){
             let anno = PlaceAnnotation(place: place)
             anno.title = place.properties?.name
             anno.coordinate = c
             mapView.addAnnotation(anno)
             mapView.showAnnotations([anno], animated: true)
+            mapView.selectAnnotation(anno, animated: true)
         }
     }
     

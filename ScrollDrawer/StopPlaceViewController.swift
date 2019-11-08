@@ -19,8 +19,21 @@ class StopPlaceViewController: TableViewController {
     }
     
     private func setupPlaceContent(){
-        self.tableView.updateData(sections: [Section(headerViewModel: WelcomeHeaderViewModel(title: place.properties?.name ?? "", buttonText: "Departures", buttonAction: {
-            print("Whatever")
-        }), viewModels: [])])
+        
+        let image = place.transportModes().icon(tint: .gray)
+        let additionalInfoVM = PlaceAdditionalInfoCellViewModel(distanceString: "90m", icon: image)
+        let travelHereButtonVM = ButtonCellViewModel(buttonTitle: "Travel here") { [weak self] in
+            self?.didTapSomething()
+        }
+        self.tableView.updateData(sections: [Section(viewModels: [additionalInfoVM, travelHereButtonVM])])
+    }
+    
+    private func didTapSomething(){
+        let sp = StopPlaceViewController(place: place)
+        self.navigationController?.pushViewController(sp, animated: true)
+    }
+    
+    deinit {
+        print("Deinit stopPlaceDrawerContent")
     }
 }

@@ -169,12 +169,12 @@ class SearchViewController: UIViewController {
     }
     
     private func commitLayoutChanges(animated:Bool, show:Bool){
-        UIView.animate(withDuration: animated ? 0.3 : 0.0, delay: 0.0, usingSpringWithDamping: 1.2, initialSpringVelocity: 1.5, options: .curveEaseInOut, animations: {
-            self.topBackground.backgroundColor = show ? .white : .clear
-            self.searchField.backgroundColor = show ? UIColor(hex: "#F3F3F3") : .white
-            self.tableView.alpha = show ? 1.0 : 0.0
-            self.view.setNeedsLayout()
-            self.view.layoutIfNeeded()
+        UIView.animate(withDuration: animated ? 0.3 : 0.0, delay: 0.0, usingSpringWithDamping: 1.2, initialSpringVelocity: 1.5, options: .curveEaseInOut, animations: { [weak self] in
+            self?.topBackground.backgroundColor = show ? .white : .clear
+            self?.searchField.backgroundColor = show ? UIColor(hex: "#F3F3F3") : .white
+            self?.tableView.alpha = show ? 1.0 : 0.0
+            self?.view.setNeedsLayout()
+            self?.view.layoutIfNeeded()
         }, completion: { [weak self] (completed) in
             guard let strongSelf = self else { return }
             if show{

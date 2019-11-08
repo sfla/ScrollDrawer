@@ -2,7 +2,7 @@ import UIKit
 import StiKitUtilities
 import OverlayContainer
 
-class ContainedNavigationController: ContainedViewController {
+class ContainedNavigationController: ContainedViewController{
     let underlyingNavigationController:UINavigationController
     
     init(rootViewController:UIViewController){
@@ -23,6 +23,18 @@ class ContainedNavigationController: ContainedViewController {
         nav.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         underlyingNavigationController.navigationBar.prefersLargeTitles = true
         underlyingNavigationController.didMove(toParent: self)
+        
+        
+    }
+    override func removeDrawer() {
+        underlyingNavigationController.popToRootViewController(animated: false)
+        underlyingNavigationController.view.removeFromSuperview()
+        underlyingNavigationController.removeFromParent()
+        underlyingNavigationController.delegate = nil
+        super.removeDrawer()
+    }
+    deinit {
+        print("deinit ContainedNavigationController")
     }
 }
 

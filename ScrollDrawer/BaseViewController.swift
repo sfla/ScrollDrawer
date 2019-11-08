@@ -3,7 +3,7 @@ import StiKitUtilities
 
 class BaseViewController: UIViewController {
 
-    let lifetimeDisposeBag = DisposeBag()
+    var lifetimeDisposeBag:DisposeBag! = DisposeBag()
     
     override func viewDidLoad() {
         super.viewDidLoad()

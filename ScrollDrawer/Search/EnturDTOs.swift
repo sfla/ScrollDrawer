@@ -18,6 +18,32 @@ struct EnturSearchPlace:Codable{
         }
         return nil
     }
+    func transportModes()->[TransportMode]{
+        guard let categories = properties?.category else { return [] }
+        
+        var transportModes:[TransportMode] = []
+        
+        for category in categories{
+            let transportMode:TransportMode?
+            switch category {
+            case "metroStation": transportMode = .metro
+            case "onstreetTram": transportMode = .tram
+            case "tramStation" : transportMode = .tram
+            case "onstreetBus" : transportMode = .bus
+            case "busStation"  : transportMode = .bus
+            case "railStation" : transportMode = .rail
+            case "ferryStop"   : transportMode = .water
+            case "harbourPort" : transportMode = .water
+            case "ferryPort"   : transportMode = .water
+            default: transportMode = nil
+            }
+            
+            if let t = transportMode, !transportModes.contains(t){
+                transportModes.append(t)
+            }
+        }
+        return transportModes
+    }
 }
 struct EnturSearchGeometry:Codable{
     let type:String?
